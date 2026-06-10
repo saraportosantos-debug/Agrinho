@@ -1,118 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agro Forte, Futuro Sustentável</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <header>
-        <h1>🌱 Agro Forte, Futuro Sustentável</h1>
-        <p>Produzindo hoje para preservar o amanhã.</p>
+        <div class="hero">
+            <h1>Agro Forte, Futuro Sustentável</h1>
+            <p>Conectando inovação, sustentabilidade e responsabilidade ambiental para um amanhã mais verde.</p>
+            <button id="learnMoreBtn">Saiba Mais</button>
+        </div>
     </header>
 
-    <section class="hero">
+    <main>
+        <section id="sobre">
+            <h2>Nossa Missão</h2>
+            <p>Promover práticas agrícolas que respeitem a natureza, apoiem as comunidades rurais e incentivem o uso de tecnologia limpa.</p>
+        </section>
 
-        <div class="hero-content">
-            <h2>O Campo Move o Mundo</h2>
+        <section id="pilares">
+            <h2>Pilares do Agro Forte</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>🌱 Sustentabilidade</h3>
+                    <p>Práticas ecológicas que preservam recursos naturais e aumentam a produtividade do campo.</p>
+                </div>
+                <div class="card">
+                    <h3>🚜 Tecnologia</h3>
+                    <p>Drones, sensores e inteligência de dados aplicados para eficiência e precisão.</p>
+                </div>
+                <div class="card">
+                    <h3>🤝 Comunidade</h3>
+                    <p>Valorização das comunidades rurais e fortalecimento da economia local.</p>
+                </div>
+            </div>
+        </section>
 
-            <p>
-                Tecnologia, inovação e sustentabilidade caminhando juntas para
-                construir um futuro mais produtivo e consciente.
-            </p>
-
-            <a href="#interativo" class="btn-principal">
-                Explorar
-            </a>
-
-        </div>
-
-    </section>
-
-    <section id="interativo" class="interativo">
-
-        <h2>Conheça o Agro Sustentável</h2>
-
-        <div class="botoes">
-
-            <button class="btn" data-info="sustentabilidade">
-                🌿 Sustentabilidade
-            </button>
-
-            <button class="btn" data-info="tecnologia">
-                🚜 Tecnologia
-            </button>
-
-            <button class="btn" data-info="futuro">
-                🌎 Futuro do Agro
-            </button>
-
-            <button class="btn" data-info="economia">
-                📈 Economia Rural
-            </button>
-
-        </div>
-
-        <div class="texto-box">
-
-            <h3>Informações</h3>
-
-            <p id="texto">
-                Passe o mouse sobre um dos botões para visualizar o conteúdo.
-            </p>
-
-        </div>
-
-    </section>
-
-    <section class="cards">
-
-        <div class="card">
-            <h3>💧 Uso Inteligente da Água</h3>
-
-            <p>
-                Sistemas modernos de irrigação reduzem desperdícios
-                e garantem maior eficiência na produção agrícola.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🌾 Agricultura de Precisão</h3>
-
-            <p>
-                Sensores e drones ajudam produtores a tomar decisões
-                mais rápidas e sustentáveis.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>☀ Energia Renovável</h3>
-
-            <p>
-                Fazendas modernas utilizam energia solar e outras
-                fontes limpas para diminuir impactos ambientais.
-            </p>
-        </div>
-
-    </section>
+        <section id="contato">
+            <h2>Fale Conosco</h2>
+            <form id="contactForm">
+                <input type="text" id="nome" placeholder="Seu nome" required>
+                <input type="email" id="email" placeholder="Seu e-mail" required>
+                <textarea id="mensagem" placeholder="Sua mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="formMessage"></p>
+        </section>
+    </main>
 
     <footer>
-
-        <h3>Agro Forte, Futuro Sustentável</h3>
-
-        <p>
-            Construindo um futuro produtivo, tecnológico e responsável.
-        </p>
-
+        <p>© 2026 Agro Forte, Futuro Sustentável | Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
