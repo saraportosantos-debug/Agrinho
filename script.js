@@ -1,41 +1,48 @@
-// Animação ao rolar a página
-const elementos = document.querySelectorAll(".fade");
+const textoInfo = document.getElementById("texto-info");
 
-function revelar() {
-    elementos.forEach((elemento) => {
-        const topo = elemento.getBoundingClientRect().top;
+const textos = {
 
-        if (topo < window.innerHeight - 100) {
-            elemento.classList.add("show");
-        }
+    sustentabilidade: `
+A sustentabilidade no agronegócio representa o equilíbrio entre
+produção agrícola, preservação ambiental e responsabilidade social.
+Práticas sustentáveis reduzem impactos ambientais, preservam recursos
+naturais e garantem maior eficiência produtiva. Além disso, fortalecem
+a economia rural e contribuem para um futuro mais seguro para as
+próximas gerações.
+`,
+
+    tecnologia: `
+A tecnologia está transformando o campo através da agricultura de
+precisão, sensores inteligentes e monitoramento em tempo real.
+Essas ferramentas permitem maior controle sobre a produção,
+reduzem desperdícios e aumentam a produtividade. O uso de dados
+e inovação torna o agronegócio mais competitivo, eficiente e sustentável.
+`,
+
+    futuro: `
+O futuro do agronegócio está diretamente ligado à inovação e à
+preservação dos recursos naturais. Novas tecnologias, energias
+renováveis e sistemas produtivos inteligentes contribuirão para
+alimentar uma população crescente sem comprometer o meio ambiente.
+Assim, o agro continuará sendo um dos pilares do desenvolvimento sustentável.
+`
+};
+
+const botoes = document.querySelectorAll(".btn");
+
+botoes.forEach(botao => {
+
+    botao.addEventListener("mouseover", () => {
+
+        const tema = botao.dataset.texto;
+
+        textoInfo.style.opacity = "0";
+
+        setTimeout(() => {
+            textoInfo.textContent = textos[tema];
+            textoInfo.style.opacity = "1";
+        }, 200);
+
     });
-}
 
-window.addEventListener("scroll", revelar);
-revelar();
-
-
-// Contadores animados
-function contador(id, valorFinal, velocidade) {
-
-    let valorAtual = 0;
-    const incremento = valorFinal / 100;
-
-    const intervalo = setInterval(() => {
-
-        valorAtual += incremento;
-
-        if (valorAtual >= valorFinal) {
-            valorAtual = valorFinal;
-            clearInterval(intervalo);
-        }
-
-        document.getElementById(id).textContent =
-            Math.floor(valorAtual) + "%";
-
-    }, velocidade);
-}
-
-contador("n1", 80, 20);
-contador("n2", 95, 20);
-contador("n3", 90, 20);
+});
